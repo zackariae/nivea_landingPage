@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+
+</head>
+
+<body>
+    <!--navbar-->
+    <nav id="home" class="bg-orange-300 ">
+        <!--container-->
+        <div class=" container  relative mx-auto p-6 ">
+            <!--flex container-->
+            <div class="  flex flex-wrap items-center justify-between">
+                <!--Logo-->
+                <div class="lside h-7">
+                    <img class="h-12 p-0 m-0" src="images/logo.png" alt="logo">
+                </div>
+                <!-- tabs --->
+                <div class="lside hidden space-x-6  basis-1 md:flex">
+                    <a class=" onebyone hover:text-brightRed" href="#home">Home</a>
+                    <a class=" onebyone hover:text-brightRed" href="#product">Products</a>
+                    <a class=" onebyone hover:text-brightRed" href="#about">About</a>
+                    <a class=" onebyone hover:text-brightRed" href="#review">Reviews</a>
+                </div>
+                <!--Hamburger Menu-->
+                <div class=" md:hidden">
+                    <div class=" ">
+
+                        <input class=" peer absolute opacity-0" type="checkbox" name="" id="mob">
+                        <label class="opacity-0 z-20 absolute top-6 right-4 px-5 py-3 " for="mob"> .</label>
+                        <span class="rside transition peer-checked:rotate-[-45deg] peer-checked:translate-y-[1rem] ease-in-out duration-500  
+                                    absolute  rounded-lg top-[2rem] right-5 bg-black w-10 h-1"></span>
+                        <span class="lside transition peer-checked:rotate-[45deg]  ease-in-out duration-500  
+                                    absolute rounded-lg top-[3rem] right-5 bg-black w-10 h-1"></span>
+                        <span
+                            class="rside transition peer-checked:rotate-[-45deg] peer-checked:translate-y-[-1rem] peer-checked:opacity-0 ease-in-out duration-500  absolute rounded-lg top-[4rem] right-5 bg-black w-10 h-1"></span>
+
+                        <!---mobile menu -->
+                        <div
+                            class=" peer-checked:flex hidden z-20 absolute bg-white flex-col items-center self-end space-y-4 font-bold left-6 right-6 py-8 mt-10 drop-shadow-md ">
+                            <a class="hover:text-brightRed" href="#home">Home</a>
+                            <a class="hover:text-brightRed" href="#product">Products</a>
+                            <a class="hover:text-brightRed" href="#about">About</a>
+                            <a class="hover:text-brightRed" href="#review">Reviews</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+<!-- HERO --->
+    <section class=" pb-5" id="hero">
+
+        <div
+            class="overflow-hidden flex flex-col-reverse items-center mt-5 space-y-0 container mx-auto p-6 md:mt-14 md:space-y-0 md:flex-row md:items-start">
+
+            <div class="flex flex-col mb-24 space-y-12 md:w-1/2">
+                <h1 class="lside capitalize max-w-md font-bold  text-5xl text-center pt-10  md:text-7xl md:text-left">best
+                    everyday sunscreen</h1>
+                <p class="rside max-w-sm text-center text-darkGrayishBlue md:text-left  ">Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Sint ccusamus adip</p>
+                <div class="flex items-center justify-center text-white md:justify-start">
+                    <div class="lside polygon-p flex justify-center md:justify-start">
+                        <a class="bg-brightRed  p-3 px-6 pt-2  polygon-r hover:bg-brightRedLigh" href="#">Order Now</a>
+                    </div>
+                    <div class="rside polygon-p flex justify-center md:justify-start">
+                        <a class="bg-veryDarkBlue p-3 px-6 pt-2  polygon-l hover:bg-brightRedLight" href="#">Know more</a>
+                    </div>
+                </div>
+
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                                result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+
+
+            <div class="relative h-80 w-full md:w-1/2 ">
+
+                <img class="sun  h-48 -top-16 -right-10 absolute md:h-48 md:-top-16 md:-right-10 " src="images/sun.png"
+                    alt="">
+                <img class="img-l h-20 top-60 left-16 absolute md:h-36 md:top-80 md:-left-16  " src="images/eff.png" alt="">
+                <img class="img-l h-64 top-9 left-24 absolute  shadow-lg shadow-slate-800  md:h-96 md:top-9 md:left-5"
+                    src="images/pack.png" alt="">
+                <img class="img-r h-64 top-10 left-36 absolute md:h-96 md:top-10 md:left-24  " src="images/prod.png" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class=" pb-5">
+
+        <div class="overflow-hidden container mx-auto p-6 flex flex-col items-center justify-center ">
+            <h1 class="l-pro text-4xl text-center mb-20 w-fit border-b-4 border-b-brightRed">
+                Our Benefits
+            </h1>
+
+            <div
+                class="flex flex-col items-start justify-between space-y-16 text-center md:space-x-8 md:space-y-0 md:flex-row">
+
+                <div class="lside flex flex-col items-center justify-center basis-1/3 p-4">
+                    <i class="text-6xl  text-brightRed fa-solid fa-ranking-star"></i>
+                    <h2 class="text-2xl py-5">Best Quality</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. pellendus quo voluptatum quia rem a
+                        nihi</p>
+                </div>
+                <div class="rside flex flex-col items-center justify-center basis-1/3 p-4">
+                    <i class="text-6xl  text-brightRed fa-solid fa-truck-fast"></i>
+                    <h2 class="text-2xl py-5">Free shipping</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. pellendus quo voluptatum quia rem a
+                        nihi</p>
+                </div>
+                <div class="lside flex flex-col items-center justify-center basis-1/3 p-4">
+                    <i class="text-6xl  text-brightRed fa-solid fa-certificate"></i>
+                    <h2 class="text-2xl py-5">Best Quality</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. pellendus quo voluptatum quia rem a
+                        nihi</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pb-5 w-full bg-cyan-700 text-white">
+        <div class=" overflow-hidden container mx-auto p-6 pt-10 flex flex-col items-center text-center">
+            <h1 class="bside capitalize font-bold text-4xl my-10 w-fit border-b-4 border-brightRed">best selling products</h1>
+            <p class="rside">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum odio ea praesentium libero eveniet
+                dolorum fuga reprehenderit? Ea fugiat veniam, distinctio harum aspernatur voluptatum provident
+                perspiciatis? </p>
+        </div>
+    </section>
+
+    <!-- prod 01 -->
+    <section id="product" class="section01 pb-3">
+        <div class="overflow-hidden container p-6 mx-auto flex flex-col items-center  md:flex-row ">
+            <div class=" relative h-96 w-full  lg:h-[50rem] md:w-1/2">
+                <img class="l-prod01 h-96 top-3 left-0 absolute  md:h-auto lg:h-[50rem]" src="images/03.webp" alt="">
+                <img class="r-prod01 h-96 top-4 left-12 absolute md:h-auto lg:h-[50rem]" src="images/04.webp" alt="">
+            </div>
+
+            <div class="text-center md:w-1/2 md:text-left">
+                <h1 class="font-bold text-4xl capitalize ">geranium palmarosa face toner</h1>
+                <p class="py-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, nihil officiis
+                    minima, sit maiores quia quae, Repellat sint voluptatum veniam unde dolorum eveniet atque labore
+                    aliquam molestias corrupti nulla? Repellat sint voluptatum veniam unde dolorum eveniet atque vel?
+                </p>
+                <div class="flex items-center justify-center text-white md:justify-start">
+                    <div class="polygon-p flex justify-center md:justify-start">
+                        <a class="bg-brightRed  p-3 px-6 pt-2 pr-14 polygon-r hover:bg-brightRedLigh" href="#">Contact
+                            Me</a>
+                    </div>
+                    <div class="polygon-p flex justify-center md:justify-start">
+                        <a class="bg-veryDarkBlue p-3 px-6 pt-2 pl-14  polygon-l hover:bg-brightRedLight"
+                            href="#">Contact Me</a>
+                    </div>
+                </div>
+
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                                result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!---Second prod-->
+    <section class=" pb-3">
+        <div class="overflow-hidden container p-6 mx-auto flex flex-col items-center md:flex-row-reverse">
+            <div class=" h-96  w-full relative md:h-[36rem] lg:h-[50rem] md:w-1/2">
+                <img class="l-prod02 h-96 -left-8 top-3 absolute md:h-[36rem] lg:h-[50rem]" src="images/6.webp" alt="">
+                <img class="r-prod02 h-96 left-12 top-4 absolute md:h-[36rem] lg:h-[50rem]" src="images/5.webp" alt="">
+            </div>
+            <div class="text-center md:w-1/2 md:text-left ">
+                <h1 class="font-bold text-4xl">ANTI-PIGMENTFLECKEN PICKELMALE SERUM</h1>
+                <p class="py-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta beatae perspiciatis
+                    corrupti quos! Fugiat deleniti quidem, praesentium pariatur at inventore animi amet ea, dolorum id
+                    eligendi, sapiente veniam iusto nulla?</p>
+
+                <div class="flex items-center justify-center text-white md:justify-start">
+                    <div class="polygon-p ">
+                        <a class="bg-brightRed  p-3 px-6 pr-14 polygon-r hover:bg-brightRedLigh" href="#">Contact Me</a>
+                    </div>
+                    <div class="polygon-p">
+                        <a class="bg-veryDarkBlue p-3 px-6 pl-14  polygon-l hover:bg-brightRedLight" href="#">Contact
+                            Me</a>
+                    </div>
+                </div>
+
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                                result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+<!---product03-->
+    <section class=" pb-5">
+        <div class="overflow-hidden container p-6 mx-auto flex flex-col items-center   md:flex-row ">
+            <div class=" relative h-96 w-full  lg:h-[50rem] md:w-1/2">
+                <img  class="l-prod03 h-96 top-3 -left-8 absolute  md:h-auto lg:h-[50rem]" src="images/8.webp" alt="">
+                <img class="r-prod03 h-96 top-4 left-12 absolute md:h-auto lg:h-[50rem]" src="images/7.webp" alt="">
+            </div>
+
+            <div class="text-center md:w-1/2 md:text-left">
+                <h1 class="font-bold text-4xl capitalize ">geranium palmarosa face toner</h1>
+                <p class="py-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, nihil officiis
+                    minima, sit maiores quia quae, Repellat sint voluptatum veniam unde dolorum eveniet atque labore
+                    aliquam molestias corrupti nulla? Repellat sint voluptatum veniam unde dolorum eveniet atque vel?
+                </p>
+                <div class="flex items-center justify-center text-white md:justify-start">
+                    <div class="polygon-p flex justify-center md:justify-start">
+                        <a class="bg-brightRed  p-3 px-6 pt-2 pr-14 polygon-r hover:bg-brightRedLigh" href="#">Contact
+                            Me</a>
+                    </div>
+                    <div class="polygon-p flex justify-center md:justify-start">
+                        <a class="bg-veryDarkBlue p-3 px-6 pt-2 pl-14  polygon-l hover:bg-brightRedLight"
+                            href="#">Contact Me</a>
+                    </div>
+                </div>
+
+                <svg style="visibility: hidden; position: absolute;" width="0" height="0"
+                    xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                                result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+<!--feed back-->
+    <section id="review" class=" pb-5">
+        <div
+            class="relative overflow-hidden container p-6 pt-10 mx-auto flex flex-col items-center text-center space-y-8 md:text-left md:flex-row-reverse">
+            <div>
+                <img class=" h-auto rounded-sm w-full " src="images/review.webp" alt="">
+            </div>
+            <div>
+                <h1 class=" text-4xl">Buyer's Feedback</h1>
+                <p class="py-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eos, unde at magni
+                    similique non consequuntur ex assumenda? Nemo quisquam impedit quidem modi asperiores iste fuga
+                    sequi, perferendis molestiae velit!</p>
+                <div class="text-left">
+                    <h3 class="font-bold">Maria Jeff</h3>
+                    <p class=" text-xs">Beauty Expert</p>
+                    <div class="flex items-center mb-1">
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>First star</title>
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Second star</title>
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Third star</title>
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Fourth star</title>
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Fifth star</title>
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                            </path>
+                        </svg>
+                        <h3 class="ml-2 text-sm font-semibold text-gray-900 dark:text-white">Thinking to buy another
+                            one!</h3>
+                    </div>
+                </div>
+
+                <img class=" animate-[wiggle_3s_ease-in-out_infinite]  hidden h-20 absolute top-10 right-60  md:inline lg:h-24 lg:right-[40rem] " src="images/carton.png" alt="" srcset="">
+                <img class=" animate-bounce-slow  h-28 absolute bottom-3 left-40 lg:h-36 " src="images/sub02.png" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- FAQ --->
+    <section class="faq w-full container mx-auto p-8 pb-10">
+        <h1 class="font-bold text-center text-5xl capitalize p-16">frequenty ask questions</h1>
+        <div class="shadow-md grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div class="tab w-full overflow-hidden  border-t">
+                <input class="absolute opacity-0" id="tab-single-one" type="checkbox" name="tabs2">
+                <label class=" border-l-4 border-l-brightRed block p-5 leading-normal cursor-pointer"
+                    for="tab-single-one">Label One</label>
+                <div class="tab-content overflow-hidden border-l-2 bg-gray-100  leading-normal">
+                    <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto,
+                        explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta
+                        molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                </div>
+            </div>
+            <div class="questions tab w-full overflow-hidden border-t ">
+                <input class="absolute opacity-0" id="tab-single-two" type="checkbox" name="tabs2">
+                <label class="border-l-4 border-l-brightRed block p-5 leading-normal cursor-pointer"
+                    for="tab-single-two">Label Two</label>
+                <div class="tab-content overflow-hidden border-l-2 bg-gray-100 leading-normal">
+                    <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto,
+                        explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta
+                        molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                </div>
+            </div>
+            <div class="questions tab w-full overflow-hidden border-t ">
+                <input class="absolute opacity-0" id="tab-single-three" type="checkbox" name="tabs2">
+                <label class="border-l-4 border-l-brightRed block p-5 leading-normal cursor-pointer"
+                    for="tab-single-three">Label Three</label>
+                <div class="tab-content overflow-hidden border-l-2 bg-gray-100 leading-normal">
+                    <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto,
+                        explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta
+                        molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                </div>
+            </div>
+            <div class="questions tab w-full overflow-hidden border-t ">
+                <input class="absolute opacity-0" id="tab-4" type="checkbox" name="tabs2">
+                <label class="border-l-4 border-l-brightRed block p-5 leading-normal cursor-pointer" for="tab-4">Label
+                    four</label>
+                <div class="tab-content overflow-hidden border-l-2 bg-gray-100  leading-normal">
+                    <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto,
+                        explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta
+                        molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                </div>
+            </div>
+
+            <div class="questions tab w-full overflow-hidden border-t ">
+                <input class="absolute opacity-0" id="tab-5" type="checkbox" name="tabs2">
+                <label class="border-l-4 border-l-brightRed block p-5 leading-normal cursor-pointer" for="tab-5">Label
+                    five</label>
+                <div class="tab-content overflow-hidden border-l-2 bg-gray-100 leading-normal">
+                    <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto,
+                        explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta
+                        molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="  pb-10">
+        <div
+            class="bg-black border-slate-900 rounded-lg container p-6 mx-auto flex flex-col items-center text-white justify-evenly md:space-x-40 md:flex-row">
+            <div class=" font-bold text-center md:text-left md:w-1/2">
+                <h1 class=" text-3xl py-2"> Subscribe for Updates</h1>
+                <p class=" text-sm text-gray-400">Lorem ipsum dolor sit adipisicing elit. Repellendus necessitatibus
+                    eveniet aut, error officiis at fuga b</p>
+            </div>
+            <div class=" bg-white border rounded-md flex items-center md:justify-end p-2 my-2 md:w-1/2">
+                <input class=" border rounded-md w-full p-2" type="email" name="email" id="email"
+                    placeholder="Enter your email">
+                <input class=" border-yellow-400  rounded-md p-2 bg-yellow-400 text-md" type="submit" value="Subscribe">
+            </div>
+        </div>
+    </section>
+    <!--  Our latest blogs--->
+    <section class="pb-10">
+        <div class="container p-6 mx-auto text-center md:text-left">
+            <h1 class=" font-bold text-3xl text-center py-5">Our latest blogs</h1>
+            <div class="flex flex-col items-center space-y-16 md:space-y-0 md:space-x-6 md:flex-row">
+                <div class="md:w-1/3">
+                    <img class="object-fill h-48 w-96 border-white rounded-md my-3" src="images/kid01.jpg" alt="">
+                    <h3 class="text-xl font-bold py-2 ">Awsome tips</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt quisquam, dolorem nam ad
+                        est odit</p>
+                </div>
+                <div class=" md:w-1/3">
+                    <img class="object-fill h-48 w-96 border-white rounded-md my-3" src="images/kid02.jfif" alt="">
+                    <h3 class="text-xl font-bold py-2 ">Awsome tips</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt quisquam, dolorem nam ad
+                        est odit</p>
+                </div>
+                <div class="md:w-1/3">
+                    <img class="object-fill h-48 w-96 border-white rounded-md my-3" src="images/kid03.jpg" alt="">
+                    <h3 class="text-xl font-bold py-2 ">Awsome tips</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi deserunt quisquam, dolorem nam ad
+                        est odit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container px-6 mx-auto h-1 bg-black my-16"><br /></div>
+
+    <section class="pb-8">
+        <div class="container p-6 mx-auto grid grid-cols-2 gap-x-5 gap-y-8 text-xs md:grid-cols-3 lg:grid-cols-7">
+            <div class="capitalize lg:col-span-2">
+                <h1 class=" font-bold text-3xl pb-3">falow us</h1>
+                <a class=" text-gray-800  pb-1 hover:text-brightRed hover:font-bold hover:pl-1 " href=""><i
+                        class="fa-brands fa-square-twitter fa-fade text-5xl "></i></i></a>
+                <a class=" text-gray-800  pb-1 hover:text-brightRed hover:font-bold hover:pl-1 " href=""><i
+                        class="fa-brands fa-square-instagram fa-fade text-5xl"></i></a>
+                <a class=" text-gray-800  pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href=""><i
+                        class="fa-brands fa-square-facebook fa-fade text-5xl"></i></a>
+                <a class=" text-gray-800  pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href=""><i
+                        class="fa-brands fa-linkedin fa-fade text-5xl"></i></a>
+            </div>
+            <div class="capitalize">
+                <h1 class=" group xtoo font-bold text-3xl pb-3">blog</h1>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">company</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1 " href="">career</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">mobile</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">how it
+                    works</a>
+            </div>
+            <div class="  capitalize">
+                <h1 class=" font-bold text-3xl pb-3">About</h1>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">Contact</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1 " href="">about
+                    us</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">FAQ</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">our
+                    team</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">terms of
+                    service</a>
+            </div>
+            <div class="capitalize">
+                <h1 class=" font-bold text-3xl pb-3">product</h1>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">terms of
+                    use</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1 " href="">privacy
+                    policy</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href="">log in</a>
+            </div>
+            <div class="capitalize col-span-2">
+                <h1 class=" font-bold text-3xl pb-3">Dounload app</h1>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href=""><i class="text-lg pr-1 fa-brands fa-google-play"></i> google
+                    play</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1 " href=""><i class="text-lg pr-3 fa-brands fa-apple"></i>apple
+                    store</a>
+                <a class=" text-gray-800 block pb-1 hover:text-brightRed hover:font-bold hover:pl-1" href=""><i class="text-lg pr-1 fa-solid fa-desktop"></i>desktop</a>
+            </div>
+        </div>
+    </section>
+
+
+
+<script src="js/myscript.js"></script>
+</body>
+
+</html>
