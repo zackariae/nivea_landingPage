@@ -1,2 +1,2 @@
 # nivea_landingPage
-a product landing page using htm, css ,tailwindcss, javascript, Gsap (js animation library)
+a responsive product landing page using htm, css ,tailwindcss, javascript, Gsap (js animation library)
