@@ -5,6 +5,7 @@ This project is a responsive product landing page created using HTML, CSS, Tailw
 ## Preview
 
 [Click here to view the live preview](https://relaxed-yeot-882efa.netlify.app) (opens in a new tab)
+![Screenshot](/Screenshot.png)
 
 ## Description
 
